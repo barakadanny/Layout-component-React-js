@@ -7,11 +7,7 @@ const Navbar = () => {
         <div class="flex items-center justify-between h-16 lg:h-20">
           <div class="flex-shrink-0">
             <a href="#" title="" class="flex">
-              <img
-                class="w-auto h-8"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/2/logo.svg"
-                alt=""
-              />
+              Logo
             </a>
           </div>
 
