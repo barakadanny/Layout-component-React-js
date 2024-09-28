@@ -6,7 +6,6 @@ const Layout = ({ children }) => {
   // Initialize dark mode based on localStorage value
   const [isDarkMode, setDarkMode] = useState(() => {
     const savedDarkMode = localStorage.getItem("darkMode") === "true";
-    console.log("Initial dark mode from localStorage:", savedDarkMode);
     return savedDarkMode;
   });
 
@@ -14,20 +13,15 @@ const Layout = ({ children }) => {
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
-      console.log("Dark mode enabled");
     } else {
       document.documentElement.classList.remove("dark");
-      console.log("Dark mode disabled");
     }
 
     // Save to localStorage whenever dark mode changes
     localStorage.setItem("darkMode", isDarkMode);
-    console.log("Saved dark mode to localStorage:", isDarkMode);
   }, [isDarkMode]);
 
-  // Log when the user clicks the dark mode toggle
   const toggleDarkMode = () => {
-    console.log("Toggling dark mode. Current state:", isDarkMode);
     setDarkMode(!isDarkMode);
   };
 

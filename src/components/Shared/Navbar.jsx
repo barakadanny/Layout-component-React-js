@@ -12,7 +12,6 @@ const Navbar = ({ isDarkMode, setDarkMode }) => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             className="inline-flex p-1 text-black dark:text-white transition-all duration-200 border border-black dark:border-white lg:hidden focus:bg-gray-100 dark:focus:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-900"
@@ -81,7 +80,6 @@ const Navbar = ({ isDarkMode, setDarkMode }) => {
             </a>
           </div>
 
-          {/* Dark Mode Toggle Button */}
           <button
             onClick={() => setDarkMode(!isDarkMode)}
             className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white transition-all duration-200"
