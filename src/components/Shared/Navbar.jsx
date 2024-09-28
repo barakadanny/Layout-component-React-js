@@ -1,109 +1,93 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setDarkMode }) => {
   return (
-    <header class="">
-      <div class="px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 lg:h-20">
-          <div class="flex-shrink-0">
-            <a href="#" title="" class="flex">
+    <header className="bg-white dark:bg-gray-800">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="#" title="" className="flex">
               Logo
             </a>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            class="inline-flex p-1 text-black transition-all duration-200 border border-black lg:hidden focus:bg-gray-100 hover:bg-gray-100"
+            className="inline-flex p-1 text-black dark:text-white transition-all duration-200 border border-black dark:border-white lg:hidden focus:bg-gray-100 dark:focus:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-900"
           >
             <svg
-              class="block w-6 h-6"
+              className="block w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-
-            <svg
-              class="hidden w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
           </button>
 
-          <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+          {/* Desktop Links */}
+          <div className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
             <a
               href="#"
-              title=""
-              class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base font-semibold text-black dark:text-white transition-all duration-200 hover:text-opacity-80"
             >
-              {" "}
-              Features{" "}
+              Features
             </a>
 
             <a
               href="#"
-              title=""
-              class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base font-semibold text-black dark:text-white transition-all duration-200 hover:text-opacity-80"
             >
-              {" "}
-              Solutions{" "}
+              Solutions
             </a>
 
             <a
               href="#"
-              title=""
-              class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base font-semibold text-black dark:text-white transition-all duration-200 hover:text-opacity-80"
             >
-              {" "}
-              Resources{" "}
+              Resources
             </a>
 
             <a
               href="#"
-              title=""
-              class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base font-semibold text-black dark:text-white transition-all duration-200 hover:text-opacity-80"
             >
-              {" "}
-              Pricing{" "}
+              Pricing
             </a>
 
-            <div class="w-px h-5 bg-black/20"></div>
+            <div className="w-px h-5 bg-black/20 dark:bg-white/20"></div>
 
             <a
               href="#"
-              title=""
-              class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base font-semibold text-black dark:text-white transition-all duration-200 hover:text-opacity-80"
             >
-              {" "}
-              Log in{" "}
+              Log in
             </a>
 
             <a
               href="#"
-              title=""
-              class="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold text-black dark:text-white border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black"
               role="button"
             >
-              {" "}
-              Try for free{" "}
+              Try for free
             </a>
           </div>
+
+          {/* Dark Mode Toggle Button */}
+          <button
+            onClick={() => setDarkMode(!isDarkMode)}
+            className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white transition-all duration-200"
+          >
+            {isDarkMode ? "🌙" : "☀️"}
+          </button>
         </div>
       </div>
     </header>
