@@ -14,6 +14,7 @@ The **Layout Component** allows developers to:
 ## Key Features:
 
 - **Responsive Design**: Supports fluid layouts across devices.
+- **Dark Mode**: Easily switch between light and dark themes.
 - **Composable and Reusable**: Designed for flexibility and reuse throughout your application.
 - **Customization**: Easily configurable through props for various use cases.
 - **Performance Optimized**: Efficiently handles rendering to maintain application speed.
